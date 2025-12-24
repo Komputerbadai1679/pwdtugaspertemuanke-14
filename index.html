@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pengulangan Angka</title>
+</head>
+<body>
+
+    <h2>Form Input Nilai</h2>
+
+    <form>
+        <label>Masukkan Nilai Angka :</label><br><br>
+        <input type="number" id="nilai">
+        <br><br>
+        <button type="button" onclick="proses()">Proses</button>
+    </form>
+
+    <br>
+    <div id="hasil"></div>
+
+    <script>
+        function proses() {
+            let nilai = document.getElementById("nilai").value;
+            let output = "";
+
+            for (let i = 1; i <= nilai; i++) {
+                if (i % 15 == 0) {
+                    output += i + " = WEB<br>";
+                } else if (i % 5 == 0) {
+                    output += i + " = Unindra<br>";
+                } else if (i % 3 == 0) {
+                    output += i + " = TI<br>";
+                } else {
+                    output += i + "<br>";
+                }
+            }
+
+            document.getElementById("hasil").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
